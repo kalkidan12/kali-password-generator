@@ -1,12 +1,13 @@
 body {
 	margin: 0px;
 	width: 100%;
-	background-color: rgb(79, 66, 92);
+
+	background-color: rgb(117, 94, 141);
 }
 .container {
 	width: 500px;
 	display: flex;
-	background-color: rgb(146, 89, 32);
+	background-color: rgb(28, 15, 39);
 	flex-direction: column;
 	justify-content: center;
 	padding: 20px;
@@ -31,8 +32,11 @@ body {
 	border-radius: 5px;
 	margin: 10px auto;
 	width: 200px;
-	background-color: rgb(130, 73, 97);
+	background-color: rgb(112, 131, 33);
 	text-align: center;
+}
+.fa {
+	cursor: pointer;
 }
 .password-type-container {
 	background-color: rgb(61, 61, 77);
@@ -46,7 +50,7 @@ body {
 	justify-content: space-between;
 	padding: 20px;
 }
-#options {
+#password-type-option {
 	border-radius: 5px;
 	background-color: rgb(61, 61, 77);
 	padding: 10px;
@@ -65,4 +69,5 @@ body {
 	border: none;
 	color: white;
 	font-weight: bold;
+	cursor: pointer;
 }
