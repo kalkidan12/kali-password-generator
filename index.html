@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>password generator</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="./css//style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="head-title">
+				<h2>Need a password? Try kali-password Strong Password Generator.</h2>
+				<p>Generate secure, random passwords to stay safe online.</p>
+			</div>
+			<div class="box-1">
+				<p>Generated password:</p>
+				<div class="generated-password-container">
+					<p class="generated-password-text">97jP923M8QbuZaF2UJUjmQi2WNk</p>
+				</div>
+			</div>
+
+			<p>Password type:</p>
+			<div class="password-setting-container">
+				<div>
+					<select id="options">
+						<option value="Random Passsword">Random Passsword</option>
+						<option value="Memoreble Password">Memoreble Password</option>
+						<option value="Pin Number">PIN</option>
+					</select>
+				</div>
+				<div><i style="font-size: 24px" class="fa">&#xf021;</i></div>
+				<div class="">
+					<button class="btn">Copy Secure Password</button>
+				</div>
+			</div>
+			<div class="copy-status-toast">
+				<p>Password copied</p>
+			</div>
+			<div class="password-type-container">
+				<div>
+					<label for="length">Length</label>
+					<input type="range" placeholder="" />
+					<label for="length">12</label>
+				</div>
+				<div>
+					<input type="checkbox" />
+					<label for="length">Numbers</label>
+				</div>
+				<div class="">
+					<input type="checkbox" />
+					<label for="length">Symbols</label>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

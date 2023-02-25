@@ -1,0 +1,68 @@
+body {
+	margin: 0px;
+	width: 100%;
+	background-color: rgb(79, 66, 92);
+}
+.container {
+	width: 500px;
+	display: flex;
+	background-color: rgb(146, 89, 32);
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+	margin: 50px auto;
+	border-radius: 10px;
+	color: white;
+}
+.head-title {
+	text-align: center;
+}
+.box-1 {
+}
+.generated-password-container {
+	display: flex;
+	justify-content: center;
+	background-color: antiquewhite;
+	padding: 10px;
+	border-radius: 10px;
+	color: black;
+}
+.copy-status-toast {
+	border-radius: 5px;
+	margin: 10px auto;
+	width: 200px;
+	background-color: rgb(130, 73, 97);
+	text-align: center;
+}
+.password-type-container {
+	background-color: rgb(61, 61, 77);
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px;
+	border-radius: 10px;
+}
+.password-setting-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+#options {
+	border-radius: 5px;
+	background-color: rgb(61, 61, 77);
+	padding: 10px;
+	border: none;
+	color: white;
+	font-weight: bold;
+}
+
+#options:focus {
+	border: none;
+}
+.btn {
+	border-radius: 5px;
+	background-color: rgb(61, 61, 77);
+	padding: 10px;
+	border: none;
+	color: white;
+	font-weight: bold;
+}
