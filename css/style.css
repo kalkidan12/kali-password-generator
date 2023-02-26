@@ -24,10 +24,12 @@ body {
 	text-decoration: none;
 }
 .nav-item1 {
+	cursor: pointer;
 	font-size: 22px;
 	font-weight: bold;
 }
 .nav-item2 {
+	cursor: pointer;
 	border-radius: 15px;
 	padding: 5px;
 	border: none;
