@@ -35,18 +35,42 @@ function generatePassword() {
 	passwordLength = document.getElementById("password-length").value;
 	document.getElementById("length-value").innerText = passwordLength;
 	var password = "";
+	if (
+		selectPasswordType == "Random Password" &&
+		addNumber.checked == true &&
+		addSymbol.checked == true
+	) {
+		for (var i = 0; i <= passwordLength; i++) {
+			var randomPassword = Math.floor(Math.random() * numCharSymbol.length);
+			password += numCharSymbol.substring(randomPassword, randomPassword + 1);
+		}
+	}
+	if (selectPasswordType == "Random Password" && addNumber.checked == true) {
+		for (var i = 0; i <= passwordLength; i++) {
+			var randomPassword = Math.floor(Math.random() * numChar.length);
+			password += numChar.substring(randomPassword, randomPassword + 1);
+		}
+	}
+	if (selectPasswordType == "Random Password" && addSymbol.checked == true) {
+		for (var i = 0; i <= passwordLength; i++) {
+			var randomPassword = Math.floor(Math.random() * charSymbol.length);
+			password += charSymbol.substring(randomPassword, randomPassword + 1);
+		}
+	}
 	if (selectPasswordType == "Random Password") {
 		for (var i = 0; i <= passwordLength; i++) {
 			var randomPassword = Math.floor(Math.random() * chars.length);
 			password += chars.substring(randomPassword, randomPassword + 1);
 		}
 	}
-	if (selectPasswordType == "Random Password" && addNumber == true) {
+
+	if (selectPasswordType == "PIN" && addSymbol.checked == true) {
 		for (var i = 0; i <= passwordLength; i++) {
 			var randomPassword = Math.floor(Math.random() * numChar.length);
-			password += numChar.substring(randomPassword, randomPassword + 1);
+			password += numSymbol.substring(randomPassword, randomPassword + 1);
 		}
 	}
+
 	if (selectPasswordType == "PIN") {
 		for (var i = 0; i <= passwordLength; i++) {
 			var randomPassword = Math.floor(Math.random() * number.length);
@@ -60,8 +84,6 @@ function generatePassword() {
 		copyStatus.innerText = msg;
 		copyStatus.style.padding = "10px";
 	}
-
-	console.log(selectPasswordType);
 }
 //
 function copyPassword() {
