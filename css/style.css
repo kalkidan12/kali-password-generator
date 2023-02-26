@@ -115,6 +115,8 @@ body {
 @media only screen and (max-width: 550px) {
 	.container {
 		width: 90%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
 		display: flex;
 		background-color: rgb(28, 15, 39);
 		flex-direction: column;
@@ -128,6 +130,8 @@ body {
 @media only screen and (max-width: 470px) {
 	.container {
 		width: 90%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
 		display: flex;
 		background-color: rgb(28, 15, 39);
 		flex-direction: column;
