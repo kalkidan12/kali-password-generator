@@ -59,12 +59,14 @@ body {
 	display: flex;
 	justify-content: center;
 	background-color: antiquewhite;
-	padding: 10px;
+	padding: 5px;
 	border-radius: 10px;
 	color: black;
 }
 .generated-password-text {
 	font-size: 18px;
+	max-width: 400px;
+	overflow-wrap: break-word;
 }
 .copy-status-toast {
 	border-radius: 5px;
@@ -142,6 +144,10 @@ body {
 	}
 	.nav-item1 {
 		display: none;
+	}
+	.generated-password-text {
+		width: 90%;
+		overflow-wrap: break-word;
 	}
 	.password-type-container {
 		background-color: rgb(61, 61, 77);

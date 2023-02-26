@@ -35,6 +35,7 @@ function generatePassword() {
 	passwordLength = document.getElementById("password-length").value;
 	document.getElementById("length-value").innerText = passwordLength;
 	var password = "";
+	var finalPassword = "";
 	if (
 		selectPasswordType == "Random Password" &&
 		addNumber.checked == true &&
@@ -42,40 +43,49 @@ function generatePassword() {
 	) {
 		for (var i = 0; i <= passwordLength; i++) {
 			var randomPassword = Math.floor(Math.random() * numCharSymbol.length);
-			password += numCharSymbol.substring(randomPassword, randomPassword + 1);
+			finalPassword += numCharSymbol.substring(
+				randomPassword,
+				randomPassword + 1,
+			);
 		}
+		password = finalPassword.slice(0, passwordLength);
 	}
 	if (selectPasswordType == "Random Password" && addNumber.checked == true) {
 		for (var i = 0; i <= passwordLength; i++) {
 			var randomPassword = Math.floor(Math.random() * numChar.length);
-			password += numChar.substring(randomPassword, randomPassword + 1);
+			finalPassword += numChar.substring(randomPassword, randomPassword + 1);
 		}
+		password = finalPassword.slice(0, passwordLength);
 	}
 	if (selectPasswordType == "Random Password" && addSymbol.checked == true) {
 		for (var i = 0; i <= passwordLength; i++) {
 			var randomPassword = Math.floor(Math.random() * charSymbol.length);
-			password += charSymbol.substring(randomPassword, randomPassword + 1);
+			finalPassword += charSymbol.substring(randomPassword, randomPassword + 1);
 		}
+		password = finalPassword.slice(0, passwordLength);
 	}
 	if (selectPasswordType == "Random Password") {
 		for (var i = 0; i <= passwordLength; i++) {
 			var randomPassword = Math.floor(Math.random() * chars.length);
-			password += chars.substring(randomPassword, randomPassword + 1);
+			finalPassword += chars.substring(randomPassword, randomPassword + 1);
 		}
+		password = finalPassword.slice(0, passwordLength);
 	}
 
 	if (selectPasswordType == "PIN" && addSymbol.checked == true) {
 		for (var i = 0; i <= passwordLength; i++) {
 			var randomPassword = Math.floor(Math.random() * numChar.length);
-			password += numSymbol.substring(randomPassword, randomPassword + 1);
+			finalPassword += numSymbol.substring(randomPassword, randomPassword + 1);
 		}
+		password = finalPassword.slice(0, passwordLength);
 	}
 
 	if (selectPasswordType == "PIN") {
 		for (var i = 0; i <= passwordLength; i++) {
 			var randomPassword = Math.floor(Math.random() * number.length);
-			password += number.substring(randomPassword, randomPassword + 1);
+			finalPassword += number.substring(randomPassword, randomPassword + 1);
 		}
+		password = finalPassword.slice(0, passwordLength);
 	}
 
 	document.getElementById("password").innerText = password;
