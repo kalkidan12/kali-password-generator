@@ -1,4 +1,3 @@
-var password = document.getElementById("password");
 var copyStatus = document.getElementById("copied-status");
 var msg = "";
 
@@ -17,25 +16,53 @@ document
 	.addEventListener("change", function () {
 		selectPasswordType = this.value;
 	});
+//
 
+var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var number = "0123456789";
+
+var numChar = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numCharSymbol =
+	"0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numSymbol = "0123456789!@#$%^&*()";
+var charSymbol =
+	"abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+// Set default password on load
+function defaultPass() {
+	var password = "";
+	var finalPassword = "";
+	for (var i = 0; i <= passwordLength; i++) {
+		var randomPassword = Math.floor(Math.random() * numCharSymbol.length);
+		finalPassword += numCharSymbol.substring(
+			randomPassword,
+			randomPassword + 1,
+		);
+	}
+	password = finalPassword.slice(0, passwordLength);
+	document.getElementById("password").innerText = password;
+}
+
+document.addEventListener("DOMContentLoaded", defaultPass);
 //
 function generatePassword() {
 	//
-	var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	var number = "0123456789";
+	// var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	// var number = "0123456789";
 
-	var numChar =
-		"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	var numCharSymbol =
-		"0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	var numSymbol = "0123456789!@#$%^&*()";
-	var charSymbol =
-		"abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	//
+	// var numChar =
+	// 	"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	// var numCharSymbol =
+	// 	"0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	// var numSymbol = "0123456789!@#$%^&*()";
+	// var charSymbol =
+	// 	"abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	// //
 	passwordLength = document.getElementById("password-length").value;
 	document.getElementById("length-value").innerText = passwordLength;
 	var password = "";
 	var finalPassword = "";
+
 	if (
 		selectPasswordType == "Random Password" &&
 		addNumber.checked == true &&
