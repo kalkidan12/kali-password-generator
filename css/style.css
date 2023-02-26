@@ -4,6 +4,39 @@ body {
 
 	background-color: rgb(117, 94, 141);
 }
+.nav {
+	height: 50px;
+	padding: 6px;
+
+	background-color: rgb(28, 15, 39);
+}
+.nav .nav-links {
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav-links {
+	margin-right: 10px;
+}
+.nav-links li {
+	list-style: none;
+	text-decoration: none;
+}
+.nav-item1 {
+	font-size: 22px;
+	font-weight: bold;
+}
+.nav-item2 {
+	border-radius: 15px;
+	padding: 5px;
+	border: none;
+	color: white;
+	font-size: 16px;
+	background-color: rgb(112, 131, 33);
+	padding: 10px 10px;
+	margin-top: -10px;
+}
 .container {
 	width: 500px;
 	display: flex;
@@ -99,7 +132,15 @@ body {
 		border-radius: 10px;
 		color: white;
 	}
-
+	.nav .nav-links {
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.nav-item1 {
+		display: none;
+	}
 	.password-type-container {
 		background-color: rgb(61, 61, 77);
 		display: flex;
